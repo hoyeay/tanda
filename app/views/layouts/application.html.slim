@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title
+      | Tanda
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    link[rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"]
+  body.landing-page.sidebar-collapse
+    nav.navbar.navbar-expand-lg.bg-primary.fixed-top.navbar-transparent[color-on-scroll="400"]
+      .container
+        .navbar-translate
+          a.navbar-brand[href=""]
+            |  tanda 
+          button.navbar-toggler.navbar-toggler-right[type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation"]
+            span.navbar-toggler-bar.bar1
+            span.navbar-toggler-bar.bar2
+            span.navbar-toggler-bar.bar3
+        #navigation.collapse.navbar-collapse.justify-content-end
+          ul.navbar-nav
+            li.nav-item.active
+              a.nav-link[href=""]
+                |  Home 
+            //li.nav-item
+              a.nav-link[href=""]
+                | Link
+            //li.nav-item
+              a.nav-link.disabled[href=""]
+                | Disabled
+    = yield
